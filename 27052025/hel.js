@@ -37,7 +37,7 @@ console.log("gumarn ==", result);
 function revers(str){
     let rev = "";
 
-    for (let i = str.length - 1; i >= 0; --i){
+	for (let i = str.length - 1; i >= 0; --i){
         rev += str[i];
     }
     return rev;
@@ -130,7 +130,6 @@ let digit = 5;
 let result = Stugum(digit);
 console.log(result);
 */
-
 
 
 

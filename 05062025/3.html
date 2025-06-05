@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Text Change</title>
+    </head>
+    <body>
+
+    <button in="myButton"> Click me</button>
+
+    <script>
+        document.getElementById("myButton").addEventListener("click", function() {
+            this.textContent = "Changed";
+        });
+
+    </script>
+    
+    </body>
+</html>
