@@ -132,4 +132,17 @@ console.log(result);
 */
 
 
+function cllor(array1, array2){
+    let result = [];
+    for (let i = 0; i < array1.length + array2.length; ++i){
+        if (i < array1.length){
+            result.push(array1[i]);
+            continue;
+        }
+        result.push(array2[i - array1.length]);
+    }
+    return result;
+}
+
+
 

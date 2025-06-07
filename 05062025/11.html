@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show/Hide Password</title>
+</head>
+<body>
+
+<label>
+  Password:
+  <input type="password" id="passwordInput">
+</label>
+<br><br>
+
+<label>
+  <input type="checkbox" id="toggleCheckbox"> Show password
+</label>
+
+<script>
+  document.getElementById("toggleCheckbox").addEventListener("change", function () {
+    const passwordField = document.getElementById("passwordInput");
+    
+    if (this.checked) {
+      passwordField.type = "text";
+    } else {
+      passwordField.type = "password";
+    }
+  });
+</script>
+
+</body>
+</html>
