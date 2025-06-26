@@ -1,4 +1,4 @@
-/*function isEcual(obj1, obj2){
+function isEcual(obj1, obj2){
     if (obj1 === obj2) return true;
 
     if (typeof obj1 !== "object" || typeof obj2 !== "object" || obj1 === null || obj2 === null){
@@ -18,9 +18,4 @@
 const obj1 = {name: "Hamazasp", age: 55};
 const obj2 = {name: "Hamazasp", age: 55};
 
-console.log(isEcual(obj1, obj2));*/
-
-
-let obj = {};
-let res = obj?.prop?.nested;
-console.log(res);
+console.log(isEcual(obj1, obj2));
