@@ -1,4 +1,4 @@
-/*function add(a,b,c){
+function add(a,b,c){
     if (c !== undefined) {
         return a + b + c;
     } else {
@@ -7,7 +7,6 @@
 }
 console.log(add(2, 3));
 console.log(add(2, 3, 4));
-*/
 
 
 

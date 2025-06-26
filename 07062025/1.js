@@ -5,3 +5,5 @@ Array.prototype.myForEach = function(callback){
         }
     }
 };
+
+
