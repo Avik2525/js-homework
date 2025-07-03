@@ -53,8 +53,8 @@ function Bank() {
 
 const bank = Bank();
 
-const acc1 = new CreateAccount("Avik", "001");
-const acc2 = new CreateAccount("Anna", "002");
+const acc1 = CreateAccount("Avik", "001");
+const acc2 = CreateAccount("Anna", "002");
 
 acc1.deposit(500);
 acc2.deposit(1000);
