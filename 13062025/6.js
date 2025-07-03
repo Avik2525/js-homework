@@ -15,4 +15,3 @@ Student.greet = function(){
 };
 
 console.log(Student.greet());
-

@@ -1,13 +1,13 @@
 const person1 = {
-    name: "Jons",
+    name: "Avo",
     age: 19,
     citya: "Yerevan"
 };
 
 const person2 = {
     age: 20,
-    erkir: "Armenia"
+    Country: "Armenia"
 };
 
-const mergedPerson = Object.assign({}, person1, person2);
-console.log(mergedPerson);
+const margedPerson = Object.assign({}, person1, person2);
+console.log(margedPerson);
