@@ -23,34 +23,31 @@ function CreateAccount(accountHolder, accountNumber){
     };
 }
 
-function Bank() {
-    return {
-        account: [],
+function Bank(){
+    this.account = [];
 
-        addAccount: function(account){
-            if(account) {
-                this.account.push(account);
+    this.addAccount = function(account){
+        if (account){
+            this.account.push(account);
+        }
+    }
+    this.findAccount = function(accountNumber){
+        for (let acc of this.account){
+            if (acc.accountNumber === accountNumber){
+                return acc;
             }
-        },
-        findAccount: function(accountNumber) {
-            for(let acc of this.account){
-                if(acc.accountNumber === accountNumber){
-                    return acc;
-                }
-            }
-        },
-
-        totalBalance: function() {
-            let total = 0;
-            for (let acc of this.account) {
-                total += acc.getBalance();
-            }
-            return total;
-        } 
+        }
+    }
+    this.totalBalance = function(){
+        let total = 0;
+        for (let  acc of this.account){
+            total += acc.getBalance();
+        }
+        return total;
     }
 }
 
-const bank = Bank();
+const bank = new Bank();
 
 const acc1 = new CreateAccount("Avik", "001");
 const acc2 = new CreateAccount("Anna", "002");

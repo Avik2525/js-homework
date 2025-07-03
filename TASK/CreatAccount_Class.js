@@ -26,34 +26,32 @@ class CreateAccount {
     }
 }
 
-function Bank(){
-    return {
-        account: [],
-
-        addAccount: function(account){
-            if(account){
-                this.account.push(account);
-            } 
-        },
-        findAccount: function(accountNumber){
-            for (let acc of this.account){
-                if (acc.accountNumber === accountNumber){
-                    return acc;
-                }
-            }
-        },
-
-        totalBalance: function(){
-            let total = 0;
-            for (let acc of this.account){
-                total += acc.getBalance();
-            }
-            return total;
+class Bank {
+    constructor(){
+        this.account = [];
+    }
+    addAccount(account){
+        if(account){
+            this.account.push(account);
         }
+    }
+    findAccount(accountNumber) {
+        for (let acc of this.account){
+            if(acc.accountNumber === accountNumber){
+                return acc;
+            }
+        }
+    }
+    totalBalance(){
+        let total = 0;
+        for (let acc of this.account){
+            total+= acc.getBalance();
+        }
+        return total;
     }
 }
 
-const bank = Bank();
+const bank = new Bank();
 
 const acc1 = new CreateAccount("Jonsn", "001");
 const acc2 = new CreateAccount("Vernon", "002");
