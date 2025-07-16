@@ -1,4 +1,5 @@
 const Student = true;
+const Students = false;
 
 const person = {
     name: "Jons",

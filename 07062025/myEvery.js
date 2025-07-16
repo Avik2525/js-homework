@@ -1,7 +1,7 @@
-Array.prototype.myEvery = function(callback){
+Array.prototype.myEvery = function(callback,thisArg){
     for (let i = 0; i < this.length; ++i){
         if(this.hasOwnProperty(i)){
-            if (!callback(this[i], i, this)){
+            if (!callback.call(thisArg,this[i], i, this)){
                 return false;
             }
         }
