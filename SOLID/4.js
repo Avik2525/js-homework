@@ -19,9 +19,10 @@ const Scanner = {
 
 class OldPrinter {
     constructor() {
-        Object.assign(this, Printer);
+        Object.assign(this, Fax);
     }
 }
 
 const oldPrinter = new OldPrinter();
-oldPrinter.print("My Document.pdf");
+oldPrinter.fax("My Document.pdf");
+

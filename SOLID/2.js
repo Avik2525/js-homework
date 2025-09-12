@@ -1,4 +1,10 @@
+
 class PaymentMethod {
+    constructor() {
+        if(this.constructor === PaymentMethod) {
+            throw new Error("This is INTERFACE class!!!");
+        }
+    }
     pay(amout) {
         throw new Error("pay() petq e irakanacvi jarangi klasum");
     }
@@ -22,3 +28,7 @@ class PaymentProcessor {
         paymentMethod.pay(amout);
     }
 }
+
+let b = new PaymentMethod();
+let x = new PayPalPayment();
+x.pay();

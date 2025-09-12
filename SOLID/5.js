@@ -25,3 +25,8 @@ class MessageSender {
         this.service.send(message);
     }
 }
+
+let emailService = new EmailService();
+let x = new MessageSender(emailService);
+x.sendMessage("Hi")
+
