@@ -1,29 +1,21 @@
-Function.prototype.myApply = function(constext, args){
-    constext = constext || globalThis;
+Function.prototype.myApply = function(context, args){
+    context = context || globalThis;
 
     const symb = Symbol("custom_fn");
 
-    constext[symb] = this;
+    context[symb] = this;
 
     let res;
 
     if(Array.isArray(args)){
-        res = constext[symb](...args)
+        res = context[symb](...args)
     } else if (args === null || args === undefined){
-        res = constext[symb]();
+        res = context[symb]();
     } else {
         console.log("Error");
     }
 
-    delete constext[symb];
+    delete context[symb];
 
     return res;
 }
-
-
-function greet(age, country){
-    console.log(`${this.name} is ${age} years old and lives in ${country}`);
-}
-const person = {name: "Mamikon"};
-
-greet.myApply(person, [55, "Armenia"]);

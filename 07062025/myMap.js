@@ -1,11 +1,11 @@
-Array.prototype.myMap = function(callback, thisArg){
-    const result = [];
+Array.prototype.myMap = function(callback, thisArg) {
+    let newArray = [];
 
-    for (let i = 0; i < this.length; ++i){
-        if (this.hasOwnProperty(i)){
-            result.push(callback.call(thisArg,this[i], i, this));
-        }
+    for (let i = 0; i < this.length; ++i) {
+        let result = callback.call(thisArg, this[i], i, this);
+
+        newArray.push(result);
     }
-    return result;
-}
 
+    return newArray;
+}

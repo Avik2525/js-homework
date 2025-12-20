@@ -1,21 +1,13 @@
 Function.prototype.myCall = function(context, ...args){
     context = context || globalThis;
 
-    const symp = Symbol("castom_fn");
+    const symb = Symbol("castom_fn");
 
-    context[symp] = this;
+    context[symb] = this;
 
-    const res = context[symp](...args);
+    const res = context[symb](...args);
 
-    delete context[symp];
+    delete context[symb];
 
     return res;
 }
-
-function greet(msg){
-    console.log(msg, this.name);
-}
-
-const person = {name: "Mamikon"};
-
-greet.myCall(person, "Hello");

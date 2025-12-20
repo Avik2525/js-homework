@@ -6,9 +6,3 @@ Array.prototype.myForEach = function(callback, thisArg){
     }
 };
 
-const num = [1,2,3];
-
-const res = num.forEach((num, indexs) => {
-    console.log(`${num} index ${indexs}`);
-});
-
